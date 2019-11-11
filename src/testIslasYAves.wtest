@@ -1,0 +1,43 @@
+import aves.*
+import islas.*
+
+test "Islas y Aves"{
+	var albatro = new Albatro()
+	var aguiluchoColorado = new AguiluchoColorado()
+	var palomaTorcaza = new PalomaTorcaza()
+	var isla = new Isla()
+	
+
+	albatro.irAlGimnasio()
+	isla.agregarAve(aguiluchoColorado)
+	isla.agregarAve(albatro)
+	isla.agregarAve(palomaTorcaza)
+	
+	assert.equals(580,aguiluchoColorado.fuerza())
+	assert.equals(1100,albatro.fuerza())
+	assert.equals(700,palomaTorcaza.fuerza())	
+	assert.equals(4500,albatro.peso())
+	assert.equals(2380,isla.fuerzaTotal())
+	assert.equals([aguiluchoColorado,palomaTorcaza],isla.avesDebiles())
+	isla.huboterremoto()
+	assert.equals(580,aguiluchoColorado.fuerza())
+	assert.equals(5300,albatro.peso())
+	assert.equals(500,palomaTorcaza.ira())
+	}
+	
+test "testX" {
+	assert.that(true)
+}	
+/* las aves débiles de la isla son el aguilucho y la paloma.
+
+A partir de la situación inicial, indicar que en la isla hubo un terremoto. Después de esto:
+
+    la velocidad del aguilucho debe aumentar a 40,
+    el peso del albatros a 5300,
+    y la ira de la paloma a 500.
+
+La fuerza del aguilucho sigue siendo 580, la del albatros sigue siendo 1100, la de la paloma pasa a 1400. 
+* Por lo tanto, la única ave débil es ahora el aguilucho.
+
+Finalmente, indicar que en la isla hubo una tormenta después del terremoto. La velocidad del aguilucho debe pasar a 80, y su fuerza a 640. El peso del albatros y la ira de la paloma deben ser igual que antes.
+Este último test se puede hacer también partiendo de la situación inicial, e indicando un terremoto seguido de una tormenta. */

@@ -1,0 +1,28 @@
+import aves.*
+
+describe ""{
+	var aguilucho = new Aguilucho()
+	
+	fixture {	
+		aguilucho.velocidad(40)
+		
+	}
+	
+test "Fuerza del Aguilucho" {
+
+	assert.equals(180,aguilucho.fuerza())
+	}	
+	
+test "Aguilucho recibe un Disgusto"{
+	aguilucho.recibirDisgusto()
+	assert.equals(80,aguilucho.velocidad())
+	assert.equals(240,aguilucho.fuerza())
+}
+
+
+
+	
+}
+
+/*un aguilucho cuya velocidad es 40 km/h tiene 180 de fuerza. Si recibe un disgusto,
+*  su velocidad pasa a 80 km/h, y por lo tanto, su fuerza se calcula como 240. */
