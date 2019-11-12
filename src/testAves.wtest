@@ -1,6 +1,6 @@
 import aves.*
 
-describe ""{
+describe "Aves"{
 	var aguilucho = new Aguilucho()
 	
 	fixture {	
