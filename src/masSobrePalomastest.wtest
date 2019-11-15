@@ -1,0 +1,7 @@
+import aves.*
+import islas.*
+import masSobrePalomas.*
+
+describe "Paloma manchada"{
+	
+}
